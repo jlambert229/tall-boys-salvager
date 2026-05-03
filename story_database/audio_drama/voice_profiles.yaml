@@ -1,0 +1,74 @@
+# Voice and casting notes (scraped from ch1 prose and screenplay).
+# gender_voice: how casting sides might read; adjust to your production values.
+
+voice_profiles:
+  - character_id: bameron_kold
+    story_role: protagonist_narrator
+    apparent_age: 19
+    gender_voice: male_young_adult
+    register: conversational_mid_range
+    accent_notes: "Urban ruined-city Yorp; no dialect specified in text. Cast can use neutral contemporary American or director choice; keep intelligibility for SFF terms."
+    performance_notes:
+      - "Heavy internal monologue: irony, self-deprecation, brag moments ('extraordinarily handsome') delivered as joke armor."
+      - "Shifts to softer introspection when discussing death, collapses, family boots, and Iton not knowing things."
+      - "Rhythmic heel-to-toe pacing can be **foley plus** soft spoken counts under breath, not only V.O."
+      - "Mutters rules while cleaning Sketch: intimate close-mic."
+      - "Ends chapter on forced optimism ('Tonight is going to be the best yet') with energy that can read as hope or denial."
+    vo_vs_dialogue:
+      narration_share: high
+      dialogue_counterparts: [sketch, uncle_iton_in_flashback]
+    mic_notes:
+      - "Rig interior: slightly boxy optional filter after canopy closes; fan bed under dialogue."
+
+  - character_id: sketch
+    story_role: deuteragonist
+    gender_voice: nonhuman_construct
+    register: "Text: tinny voice from shadows; precise, formal diction; dry sarcasm ('like one of my more sarcastic uncles')."
+    processing_notes:
+      - "Not a smooth assistant voice: slight metallic edge, small room ring off alley walls."
+      - "Long pause beat before 'All is well, Bam' after scan: hold silence for tension."
+      - "Silent protocol after tracers: no filler beeps unless you establish earlier; text says Sketch remains silent."
+    performance_notes:
+      - "Lines like 'small, squishy biological' delivered flat, not angry."
+      - "Complaint about name change: prim, clipped."
+    sfx_coupling:
+      - "Optional subtle servo under lines when he moves; duck under words."
+
+  - character_id: uncle_iton
+    story_role: flashback_storyteller
+    apparent_age: elder
+    gender_voice: male_elder
+    register: "Fireside storyteller; rhetorical flourishes; cough for effect."
+    performance_notes:
+      - "Vaux VI and war sections: epic tone without losing wry asides (Donkey Kong line)."
+      - "Slide toward Bam on 'rhymes with slam': intimate, teasing, not cruel."
+      - "Pop-tart bit: deadpan lecture over kids laughing."
+      - "Capian fleet question: let silence hang; he does not explain."
+    crowd_reaction: "Murmurs, chuckles, stifled kid giggles; walla low under Iton when crowd present."
+
+  - character_id: grams
+    story_role: referenced_only_ch1
+    gender_voice: female_elder_implied
+    register: "Crass warm aside about Iton; can be short V.O. insert during Bam memory without full scene."
+
+  - character_id: tommy
+    story_role: crowd_family_flashback
+    gender_voice: child_boy
+    performance_notes: "Suppressed giggles; hand over mouth foley."
+
+  - character_id: samantha
+    story_role: crowd_family_flashback
+    gender_voice: child_girl
+    performance_notes: "Suppressed giggles; hand over mouth foley."
+
+  - character_id: crowd_yorpers_fire
+    story_role: walla_group
+    notes: "Kids on laps, adults passing 'something that is not quite hope' (screenplay). Low community walla, fire forward in mix."
+
+  - character_id: suzzie_keener
+    story_role: mentioned_only
+    audio_handling: "No line in ch1; optional distant name-drop in crowd scene if you expand; not required."
+
+  - narrator_optional
+    story_role: third_person_bridge
+    notes: "Prose is first person throughout. Screenplay uses Bam V.O. If you add a book narrator for marketing, keep distinct from Bam to avoid double-voice confusion."

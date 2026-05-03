@@ -1,0 +1,37 @@
+locations:
+  - id: yorp
+    names: [Yorp]
+    type: ruined_city_state
+    scope: "Entire known world to Bam; centuries of war."
+    hazards:
+      - structural_collapse
+      - ongoing_firefights
+      - military_patrols
+      - lawlessness
+    culture_notes:
+      - murals_as_color_among_ruin
+      - graffiti_tags_treated_as_vandalism_on_murals
+    sources: [cp_01, blurb]
+
+  - id: vaux_vi
+    names: [Vaux VI]
+    type: colony_planet
+    note: "Historical frame for colonization struggle and long war; not same place as Yorp necessarily."
+    sources: [cp_01]
+
+  - id: dead_end_alley
+    names: [dead-end alley]
+    type: operational_bivouac
+    note: "Bam and Sketch base before moving out."
+    sources: [cp_01]
+
+  - id: gutted_train_station
+    names: [gutted train station]
+    type: landmark
+    note: "Tracer rounds skip over its roof."
+    sources: [cp_01]
+
+  - id: beyond_city_ranch
+    type: rural_edge
+    note: "Rancher with two donkeys exists beyond the city per rumor chain."
+    sources: [cp_01]

@@ -1,0 +1,365 @@
+# Chapter 1 sound script (beat order). Quoted lines are from manuscript for pickup matching.
+# duration_hint_sec: rough cumulative pacing for radio-style planning; not locked.
+
+chapter: 1
+title: Introduction to the Mech Warrior Who Never Was
+primary_sources: [cp_01.md, cp_01_screenplay.md]
+format_notes:
+  - "Bam first person in prose maps to Bam V.O. plus dry dialogue with Sketch."
+  - "Flashback Iton is discrete scene; hard cut recommended."
+  - "internal_monologue: in screenplay, all BAM (V.O.) blocks; in prose cp_01.md, paragraphs prefixed **[Interior — Bam]**."
+  - "ElevenLabs: see elevenlabs/README.md; exporter maps BAM (V.O.) -> voice_key bam_interior, BAM -> bam, SKETCH/ITON -> sketch/uncle_iton; chunks respect 2000-char Dialogue API limit."
+
+blocks:
+  - id: CH1-A01
+    slug: "EXT. DEAD-END ALLEY - YORP - TWILIGHT"
+    story_beat: "Open on ruin skyline; Sketch speaks first line."
+    duration_hint_sec: 0
+    ambients: [yorp_twilight_distant_war, alley_dead_end_close_walls]
+    sfx_one_shots: ["distant wind gust with loose metal tick"]
+    foley: []
+    music_bed: "low ruin pad, no melody yet"
+    lines:
+      - speaker: sketch
+        type: dialogue
+        text: "It's getting dark."
+    vo_over:
+      - speaker: bameron_kold
+        text: "Interior conflict: ten tons of gears and fiber optics; camera eyes strange red; do not think apocalypse thoughts about your only friend."
+    direction_notes: "Sketch very still before line; optional micro servo as eyes adjust."
+
+  - id: CH1-A02
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Sunset on Sketch; fire illusion; Bam denies machine friendship."
+    duration_hint_sec: 90
+    ambients: [yorp_twilight_distant_war]
+    sfx_one_shots: ["long low sun tone optional under mix, not literal"]
+    foley: ["Bam wipes hydraulic line"]
+    music_bed: "add low string unease"
+    vo_over:
+      - speaker: bameron_kold
+        text: "Sun should not hit Sketch's eyes that way. Machines calculate. No feeling. No friendship. What I tell myself."
+    direction_notes: "Brief beat where Sketch reads 'on fire' then is not."
+
+  - id: CH1-A03
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Partnership exposition: rig unnamed, Sketch named; jobs and dangers."
+    duration_hint_sec: 180
+    ambients: [alley_dead_end_close_walls]
+    sfx_continuous: ["sketch_biped_idle_hum_optional"]
+    foley: []
+    vo_over:
+      - speaker: bameron_kold
+        text: "Sketch lifts, digs rig out, sometimes breaks things. Bam picks routes. Salvage without soldiers, gang bosses, superstructure collapse."
+    direction_notes: "Sketch looms; Bam dwarfed beside rig."
+
+  - id: CH1-A04
+    slug: "EXT. YORP SKYLINE (IMAGINED FROM ALLEY)"
+    story_beat: "Leaning high-rises, rocket damage, bullet holes, murals vs graffiti tags."
+    duration_hint_sec: 260
+    ambients: [yorp_twilight_distant_war]
+    sfx_one_shots: ["optional distant spray can rattle far off"]
+    vo_over:
+      - speaker: bameron_kold
+        text: "Murals only real color. Neon bubble letters ruin art. Chucky was here. Bulgy Babe 5 bam bam boom. Meaningless."
+    direction_notes: "Keep read light; comedy then sour."
+
+  - id: CH1-A05
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Darkness exchange and sunset banter."
+    duration_hint_sec: 340
+    lines:
+      - speaker: sketch
+        type: dialogue
+        text: "Darkness. It is descending, as I have quite clearly mentioned."
+      - speaker: bameron_kold
+        type: dialogue
+        text: "That happens about the same time each day."
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Some people blame it on the setting sun."
+    direction_notes: "Sketch attuned; conversational intimacy."
+
+  - id: CH1-A06
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Dude / Metal Dude / name logic banter."
+    duration_hint_sec: 400
+    lines:
+      - speaker: bameron_kold
+        type: dialogue
+        text: "I'll protect you, dude."
+      - speaker: sketch
+        type: dialogue
+        text: "I am not a dude. I am made of metal and need zero protection from a small, squishy biological like you."
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Whatever, Metal Dude."
+      - speaker: sketch
+        type: dialogue
+        text: "Please do not change my name. Sketch is a fine identifier, though the reason you applied it to me remains beyond logic."
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Maybe you have two names."
+      - speaker: sketch
+        type: dialogue
+        text: "Of course that would make sense."
+    vo_over:
+      - speaker: bameron_kold
+        text: "Sketch sounds like sarcastic uncle. Robots blessing or pain. Bulk reassuring. Lot on mind."
+    direction_notes: "Sketch dry, not shouting."
+
+  - id: CH1-A07
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Grease and unknown blood; collapse death meditation."
+    duration_hint_sec: 500
+    ambients: [alley_dead_end_close_walls]
+    foley: ["grease_scrape_on_metal"]
+    sfx_one_shots: ["sticky slime subtle layer"]
+    music_bed: "thin high harmonic or drop music for gravity"
+    vo_over:
+      - speaker: bameron_kold
+        text: "Did not dig to identify body. Collapse leaves no burial. Concrete burial. No shoe arguments. Everything damaged including my people."
+    direction_notes: "Avoid exploitative gore sting; dread is emotional."
+
+  - id: CH1-A08
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Rig check; car wash fantasy; elders air conditioning; Happyville."
+    duration_hint_sec: 600
+    foley: ["wrench seals", "hydraulic check small pings"]
+    sfx_one_shots: ["optional dry hose sputter memory ghost"]
+    vo_over:
+      - speaker: bameron_kold
+        text: "Car Wash, Wash-o-World, elders brag, soft youth, Happyville sarcasm."
+    direction_notes: "Comedy relief valve after death beat."
+
+  - id: CH1-A09
+    slug: "INT. COMMUNITY FIRE RING - YORP - LAST NIGHT"
+    story_beat: "Hard cut to firelight; Iton opens history."
+    duration_hint_sec: 700
+    ambients: [fire_ring_community]
+    sfx_one_shots: ["match strike or fire flare optional at cut"]
+    music_bed: "warmer narrow chord bed"
+    lines:
+      - speaker: uncle_iton
+        type: dialogue
+        text: "Vaux VI struggled for the first hundred years of colonization, a key period for each new world."
+      - speaker: uncle_iton
+        type: stage_business
+        text: "(coughs for effect)"
+      - speaker: uncle_iton
+        type: dialogue
+        text: "After that, it was, as the ancients sometimes said, on like Donkey Kong."
+    foley: ["uncle_iton_cough_mic_pickup"]
+    walla: ["murmur donkey", "murmur kong"]
+    direction_notes: "Crowd small reactions; keep Iton forward."
+
+  - id: CH1-A10
+    slug: "INT. FIRE RING - CONTINUOUS"
+    story_beat: "Two hundred year war; deity sun; laugh riot; rhymes with slam."
+    duration_hint_sec: 820
+    lines:
+      - speaker: uncle_iton
+        type: dialogue
+        text: >-
+          War broke out, and every soul on the atmospherically friendly space rock cleared their calendars for two hundred years.
+          The yellow sun rose and fell without passing judgment, though to some, it probably seemed like a sad deity watching her favorite child march toward needless self-destruction.
+      - speaker: uncle_iton
+        type: dialogue
+        text: >-
+          To others, every day was a laugh riot full of friends, shenanigans, and bold adventures because that was the only sane way to survive with any sort of quality of life.
+          Reminds me of someone we all know, rhymes with slam.
+    walla: ["chuckles", "knowing glances as soft reactions not visible"]
+    vo_over:
+      - speaker: bameron_kold
+        text: "Firelight nice. Bam reputation list: reckless, hardworking, handsome, funny, accessible, contested zones nineteen years, higher calling."
+    direction_notes: "Iton slide toward Bam on slam line."
+
+  - id: CH1-A11
+    slug: "INT. FIRE RING - CONTINUOUS"
+    story_beat: "Rigs progression; ingenuity when sun goes down."
+    duration_hint_sec: 940
+    lines:
+      - speaker: uncle_iton
+        type: dialogue
+        text: >-
+          The rigs didn't make themselves. There was a natural progression, a way things came to be.
+          You know, problems getting solved. When the sun goes down, we all live with the rewards of our ingenuity.
+    vo_over:
+      - speaker: bameron_kold
+        text: "Ancestors flinch from bullets shrapnel particle beams; two centuries escalation; C-FEF patrol rigs and air support; war makers dream takers."
+    sfx_continuous: ["very faint rotor far air support if license allows distance"]
+
+  - id: CH1-A12
+    slug: "INT. FIRE RING - CONTINUOUS"
+    story_beat: "Capian fleet question; silence; UPV ROV6 grief."
+    duration_hint_sec: 1040
+    lines:
+      - speaker: uncle_iton
+        type: dialogue
+        text: "Capian First Expeditionary Fleet. Does anyone know what that means?"
+    sfx_one_shots: ["room tone only beat 2 to 4 sec"]
+    vo_over:
+      - speaker: bameron_kold
+        text: "No answer means Iton unsure. UPV ROV6. V for Vaux maybe. He stops when trail cold."
+    direction_notes: "Hold uncomfortable silence."
+
+  - id: CH1-A13
+    slug: "INT. FIRE RING - CONTINUOUS"
+    story_beat: "Grams snark insert; Bam internal."
+    duration_hint_sec: 1120
+    vo_over:
+      - speaker: bameron_kold
+        text: "Because he didn't know... he didn't know shit about sunshine, as Grams liked to snicker."
+    optional_insert_line:
+      speaker: grams
+      type: vo_insert
+      text: "Snicker line if cast; else Bam delivers her words in reported speech only."
+
+  - id: CH1-A14
+    slug: "INT. FIRE RING - CONTINUOUS"
+    story_beat: "Infantry territory habit; Bam tunes out; exoskeleton pop-tarts; kids laugh."
+    duration_hint_sec: 1200
+    lines:
+      - speaker: uncle_iton
+        type: dialogue
+        text: >-
+          Infantry was needed to take and hold territory, for that was the only way to claim true victory over an enemy.
+          And it just seemed like a good habit to foster: take what is yours and deny those who would deny you.
+      - speaker: uncle_iton
+        type: dialogue
+        text: >-
+          Exoskeletons that allowed each soldier to carry more guns, bullets, and contraband pop-tarts had to be armored.
+          Weapons had to be upgraded. And the fighting had to grow more intense.
+      - speaker: uncle_iton
+        type: dialogue
+        text: >-
+          That led to modern-day battle knights stomping across the ruined landscape in mechanized combat rigs five meters high.
+    foley: ["paper_doodle_scratch"]
+    walla: ["kids laugh stifled", "tommy samantha giggle covered mouths"]
+    sfx_one_shots: ["single heavy mech stomp sting symbolic not literal scene"]
+    direction_notes: "Iton drones on; comedy then stomp imagery."
+
+  - id: CH1-A15
+    slug: "EXT. ALLEY - TWILIGHT - BACK TO PRESENT"
+    story_beat: "Return from memory; heel toe; salvager vs looter; boots ethics."
+    duration_hint_sec: 1360
+    ambients: [yorp_twilight_distant_war, alley_dead_end_close_walls]
+    music_bed: "snap back to cooler ruin bed"
+    foley: ["heel_toe_measure_pace"]
+    vo_over:
+      - speaker: bameron_kold
+        text: "Meters to feet calms. Salvager legal word. Looting shot by militaries. Stealing from dead wrong. Boots on Iton without word would break Bam."
+    direction_notes: "Hard cut or crossfade 0.5s max for clarity."
+
+  - id: CH1-A16
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Mutters rules while cleaning; rats shadow creatures; MSR vs MCR naming."
+    duration_hint_sec: 1480
+    lines:
+      - speaker: bameron_kold
+        type: dialogue
+        text: "If I'm making up the rules, then I'm making up the rules."
+    vo_over:
+      - speaker: bameron_kold
+        text: "C-FEF MCR vs Bam MSR Mechanize salvaging rig not cool. Eavesdrop memory rubble."
+    foley: ["grease_scrape_on_metal"]
+
+  - id: CH1-A17
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Rules meters feet exchange; destiny line; compliment question; grunt."
+    duration_hint_sec: 1580
+    lines:
+      - speaker: sketch
+        type: dialogue
+        text: "What in the name of all that is rational are you talking about? Rules? You're making up rules now?"
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Meters versus feet."
+      - speaker: sketch
+        type: dialogue
+        text: "What?"
+      - speaker: bameron_kold
+        type: dialogue
+        text: "I think it would be way better to measure things like this... Uncle Iton... star travelers... My feet are more reliable."
+      - speaker: sketch
+        type: dialogue
+        text: "If you say so... destiny... meager influence on its course."
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Now you sound like Uncle Iton."
+      - speaker: sketch
+        type: dialogue
+        text: "Is that a compliment?"
+    foley: ["noncommittal grunt Bam"]
+    direction_notes: "Sketch tinny from twisted frame shadow."
+
+  - id: CH1-A18
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Size math seven meters twenty three feet; battlefield danger smaller target."
+    duration_hint_sec: 1720
+    vo_over:
+      - speaker: bameron_kold
+        text: "Seven meters twenty three feet seven feet taller than rig. Five versus seven meters matters for salvage. Smaller target sometimes safer."
+
+  - id: CH1-A19
+    slug: "EXT. NEAR GUTTED TRAIN STATION - ALLEY"
+    story_beat: "Tracer volley; freeze; negative space; quiet wrong."
+    duration_hint_sec: 1820
+    sfx_one_shots: ["kinetic_tracer_pass_three_rips"]
+    ambients: ["post_tracer_hush"]
+    negative_cues: ["no_mcr_footsteps", "no_explosion_after_tracers"]
+    foley: []
+    vo_over:
+      - speaker: bameron_kold
+        text: "Random Yorp. Fighting not here. Misses. Zone eerily quiet."
+    music_bed: "drop to near silence 3 to 5 sec"
+    direction_notes: "Sketch silent protocol."
+
+  - id: CH1-A20
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "Give up scraping gunk; pack tools; move out."
+    duration_hint_sec: 1920
+    foley: ["tool pack clinks", "strap adjustments"]
+    lines:
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Let's get moving before shots are fired at us."
+
+  - id: CH1-A21
+    slug: "EXT. ALLEY MOUTH - CONTINUOUS"
+    story_beat: "Sketch scans street; ten second pause; pattern window; all is well."
+    duration_hint_sec: 1980
+    sfx_continuous: ["sketch_biped_move_short"]
+    lines:
+      - speaker: sketch
+        type: dialogue
+        text: "We should have nearly three hours before this sector heats up—if the pattern holds. All is well, Bam."
+    direction_notes: "Hold ten seconds with only ambients and faint city; brave pacing."
+
+  - id: CH1-A22
+    slug: "EXT. ALLEY - CONTINUOUS"
+    story_beat: "One new thing tonight; rules callback."
+    duration_hint_sec: 2120
+    lines:
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Our goal is to find one new thing tonight. Do you think we can manage that?"
+      - speaker: sketch
+        type: dialogue
+        text: "You're making the rules. You tell me."
+
+  - id: CH1-A23
+    slug: "INT. SALVAGE RIG CANOPY - MOMENTS LATER"
+    story_beat: "Climb strap canopy clang fan cameras throttle end line."
+    duration_hint_sec: 2200
+    sfx_one_shots: ["salvage_rig_canopy_interior_sequence"]
+    lines:
+      - speaker: bameron_kold
+        type: dialogue
+        text: "Tonight is going to be the best yet. Trust me."
+    sfx_tail: ["rig engine rise sketch follow footfall low"]
+    music_bed: "cautious forward motion not triumph"
+    direction_notes: "Chapter end; episode hook if serialized."
+
+continuity_flags_for_future_episodes:
+  - "Blurb promises empire pilot, personal cost, fleet authorities; not in ch1 audio yet. See series_teaser_from_blurb.yaml."

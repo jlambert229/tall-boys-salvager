@@ -1,0 +1,37 @@
+factions:
+  - id: yorpers
+    names: [Yorpers]
+    type: local_civil_population
+    description: "People of Yorp; Bam's collective identity."
+    sources: [cp_01]
+
+  - id: c_fef
+    names: [C-FEF, Capian First Expeditionary Fleet]
+    type: military_fleet_and_ground_force
+    equipment:
+      - MCR
+      - mechanized_combat_rigs
+      - air_support
+    behavior_toward_salvagers:
+      - "Patrol ruins; hostile to looting and stripping their dead."
+    naming_notes:
+      - "Fleet name spoken as Capian First Expeditionary Fleet; meaning unclear to characters."
+    sources: [cp_01]
+
+  - id: upv
+    names: [UPV]
+    type: military_or_paramilitary
+    note: "Acronym meaning vague; causes grief to locals."
+    sources: [cp_01]
+
+  - id: rov6
+    names: [ROV6]
+    type: military_or_paramilitary
+    note: "Acronym meaning vague; causes grief to locals."
+    sources: [cp_01]
+
+  - id: gang_bosses
+    names: [gang bosses]
+    type: threat_category
+    note: "Listed alongside soldiers and collapses as lethal risks to salvagers."
+    sources: [cp_01]

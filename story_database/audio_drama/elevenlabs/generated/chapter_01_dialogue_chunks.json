@@ -1,0 +1,303 @@
+{
+  "title": "Salvager Chapter 1",
+  "model_id": "eleven_v3",
+  "max_chars_per_request_doc": 2000,
+  "export_max_chars_used": 1950,
+  "source_screenplay": "cp_01_screenplay.md",
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "char_total": 1863,
+      "inputs": [
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "It's getting dark."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "If ten tons of gears and kilometers of fiber optic could keep a secret, maybe this is what he would look like imagining the end. That is no way to think about your only friend."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Salvage tools. Salvage nerves."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "The sun should not bounce off his eyes like that. Not from this angle. Machines calculate. They do not think. They do not feel. They are not friends. That is what I tell myself."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "My rig does not have a name. The robot does. Sketch. Me and Sketch, best friends for life. He lifts. He digs me out when structures fold. Sometimes he breaks things. I pick where we go. The trick is to haul enough metal to matter without getting killed-to-death by soldiers, gang bosses, or gravity."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "High-rises lean like they want to whisper. Mostly they are sad about holes and tags. Art is art. Some of my friends still need their spray cans thrown at the sun."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "Darkness. It is descending, as I have quite clearly mentioned."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "That happens about the same time each day."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Some people blame it on the setting sun."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Not every bot bothers with small talk."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "I'll protect you, dude."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "I am not a dude. I am made of metal and need zero protection from a small, squishy biological like you."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Whatever, Metal Dude."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "Please do not change my name. Sketch is a fine identifier, though the reason you applied it to me remains beyond logic."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Maybe you have two names."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "Of course that would make sense."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Dry as one of my more sarcastic uncles."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Robots: blessing or pain in the ass. Right now, bulk reads as safe. I have a lot on my mind."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Greased up. Blood in the mix. Neither of us knew where it was from. Or who."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "I did not dig for a face I would recognize. A soldier would be worse, for other reasons. Collapses do not leave bodies to bury. One day you are here. The next you are concrete. No goodbyes. No shoe-size fights. Everything here is damaged, including my people."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Anything that screams tomorrow."
+        }
+      ]
+    },
+    {
+      "chunk_index": 1,
+      "char_total": 1630,
+      "inputs": [
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "I wish for a car wash. Nobody knows what a car was. Sometimes you find a bay with a hose that still spits. \"Car Wash.\" \"Wash-o-World.\" Almost never works. Uncle Iton knows places with power, pressure, even air conditioning. Elders brag about how hard they had it, then brag about miracles. Happyville."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "Vaux VI struggled for the first hundred years of colonization, a key period for each new world."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "After that, it was, as the ancients sometimes said, on like Donkey Kong."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "War broke out, and every soul on the atmospherically friendly space rock cleared their calendars for two hundred years. The yellow sun rose and fell without passing judgment. To some, a sad deity watching her favorite child march toward needless self-destruction."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "To others, every day was a laugh riot full of friends, shenanigans, and bold adventures, because that was the only sane way to survive with any sort of quality of life. Reminds me of someone we all know. Rhymes with slam."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "They call me Bameron Kold. Bam. Reckless. Hardworking. Ridiculously good-looking. Funny. Accessible. Yorp is one hop from damnation. Nineteen years old, nineteen years in contested zones. I am not scared to fight. Lately I hear a higher calling anyway."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "The rigs did not make themselves. There was a natural progression. Problems got solved. When the sun goes down, we live with the rewards of our ingenuity."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Humans flinch when rounds punch through their faces. Two centuries of war. Better attack. Better defense. Lately that means C-FEF. Mech rigs. Air support. Same species, new fleet. War makers. Dream takers."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "Capian First Expeditionary Fleet. Does anyone know what that means?"
+        }
+      ]
+    },
+    {
+      "chunk_index": 2,
+      "char_total": 1810,
+      "inputs": [
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Other nights it is UPV or ROV6. Acronyms without owners. Iton thinks V is for Vaux. He stops when the trail goes cold. Because he didn't know. My exhausted mind keeps hitting that revelation. Contrary to what he wanted everyone to believe, he didn't know shit about sunshine, as Grams liked to snicker."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "Infantry was needed to take and hold territory. That was the only way to claim true victory. Good habit: take what is yours. Deny those who would deny you."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "Exoskeletons that let each soldier carry more guns, bullets, and contraband pop-tarts had to be armored. Weapons upgraded. Fighting intensified."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "That led to modern-day battle knights stomping across the ruined landscape in mechanized combat rigs five meters high."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Meters to feet calms me. Scavengers see bad things. I am supposed to say salvager. Legal word. Looting gets you shot. C-FEF, ROV6, UPV, same rule: do not strip their dead. I get it. If Iton went down and I saw a stranger in his boots without a word, I would lose it."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "If I am making up the rules, then I am making up the rules."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "I try not to think about what greased us in the last collapse. Rats. Shadows. Anything but a name."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "C-FEF calls their rigs MCRs. I eavesdropped once from rubble they did not search. Mine is an MSR. Mechanize salvaging rig. Not cool. Maybe Iton can brand it."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "What in the name of all that is rational are you talking about? Rules? You are making up rules now?"
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Meters versus feet."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "What?"
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "I think it would be way better to measure things like this."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Uncle Iton, and about everyone else, use some made-up system from the star travelers who brought us here. My feet are more reliable."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "If you say so. I understand how biologicals need to feel there is such a thing as destiny, and that they have some meager influence on its course."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Now you sound like Uncle Iton."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "Is that a compliment?"
+        }
+      ]
+    },
+    {
+      "chunk_index": 3,
+      "char_total": 741,
+      "inputs": [
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Seven meters. Twenty-three of my feet. Seven feet taller than my rig, math willing. Five meters of war machine versus seven of construction steel can mean everything or nothing, depending on the job. Small can dodge what big cannot."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Nothing follows. No treads. No MCR footfalls. Random Tuesday in Yorp. Someone fighting somewhere else. Those were misses. My sector goes quiet wrong."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Let's get moving before shots are fired at us."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "We should have nearly three hours before this sector heats up, if the pattern holds. All is well, Bam."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Our goal is to find one new thing tonight. Do you think we can manage that?"
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "sketch",
+          "text": "You are making the rules. You tell me."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
+          "voice_key": "bam_interior",
+          "text": "Maybe it wasn't air conditioning, but it didn't suck."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "bam",
+          "text": "Tonight is going to be the best yet. Trust me."
+        }
+      ]
+    }
+  ]
+}

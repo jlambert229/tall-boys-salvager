@@ -1,0 +1,12 @@
+timeline_in_universe:
+  - id: vaux_vi_colonization
+    summary: "First hundred years struggle; then long war and escalation per Iton."
+    sources: [cp_01]
+
+  - id: two_centuries_total_warfare
+    summary: "Ancestors iterate weapons and armor; battle rigs outcome."
+    sources: [cp_01]
+
+  - id: recent_decades_c_fef
+    summary: "C-FEF patrol and air presence in Yorp."
+    sources: [cp_01]

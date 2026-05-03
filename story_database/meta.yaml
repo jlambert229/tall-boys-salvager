@@ -1,0 +1,22 @@
+# Salvager story database - metadata and source registry
+# Paths are relative to the salvager/ folder unless noted.
+
+meta:
+  universe: Tall Boys
+  title: Salvager
+  database_version: 1
+  last_updated: "2026-05-03"
+  layout: split
+  notes:
+    - "Plot beats that appear only in content.md stay in plot_hooks.yaml until prose confirms them."
+
+sources:
+  - id: cp_01
+    path: cp_01.md
+    label: "Chapter 1 - Introduction to the Mech Warrior Who Never Was"
+  - id: cp_01_screenplay
+    path: cp_01_screenplay.md
+    label: "Chapter 1 screenplay draft (derivative)"
+  - id: blurb
+    path: content.md
+    label: "Back-cover style description (may preview future chapters)"

@@ -1,0 +1,22 @@
+language_and_phrases:
+  - id: on_like_donkey_kong
+    text: "on like Donkey Kong"
+    kind: archaic_exclamation
+    note: "Donkeys real; kong meaningless to youth."
+    sources: [cp_01]
+
+  - id: killed_to_death
+    text: "killed-to-death"
+    kind: idiom
+    sources: [cp_01]
+
+  - id: happyville
+    text: Happyville
+    kind: sarcastic_place_name_for_fabled_comfort
+    sources: [cp_01]
+
+  - id: graffiti_tags_sample
+    items:
+      - "Chucky was here"
+      - "Bulgy Babe 5 bam bam boom"
+    sources: [cp_01]

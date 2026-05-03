@@ -1,0 +1,52 @@
+technology_and_equipment:
+  - id: msr
+    names: [MSR, mechanized salvage rig, Mechanize salvaging rig]
+    type: civilian_salvage_mech
+    height_relative: "About seven feet shorter than Sketch when conversions applied."
+    features:
+      - opaque_metal_canopy
+      - cameras
+      - cooling_fan_against_face
+    operator: bameron_kold
+    naming_status: "No proper name yet; Bam wants cooler designation than MSR."
+    sources: [cp_01]
+
+  - id: mcr
+    names: [MCR, mechanized combat rig]
+    type: military_battle_mech
+    height_meters: 5
+    operator_faction: c_fef
+    cultural_frame: "Iton calls operators battle knights."
+    sources: [cp_01]
+
+  - id: sketch_unit
+    names: [Sketch]
+    type: construction_biped
+    height_meters: 7
+    note: "Unarmed in ch1 context; grease and unknown biological residue after collapse dig."
+    sources: [cp_01]
+
+  - id: small_arms_and_ordnance
+    items:
+      - bullets
+      - shrapnel
+      - particle_beams
+      - kinetic_tracer_rounds
+      - rockets
+      - large_caliber_bullet_holes
+    sources: [cp_01]
+
+  - id: exoskeleton_lineage
+    type: historical_tech_path
+    description: "Soldier exoskeletons to carry more load, then armor, then escalated weapons and intensity."
+    sources: [cp_01]
+
+  - id: lost_world_infrastructure
+    items:
+      - car_wash_bays
+      - Wash-o-World_signage
+      - electricity_in_rare_sites
+      - water_pressure
+      - air_conditioning
+    note: "Mostly broken or mythologized by youth; elders claim access."
+    sources: [cp_01]

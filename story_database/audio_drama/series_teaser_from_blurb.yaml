@@ -1,0 +1,21 @@
+# Optional trailer or cold-open material from content.md (not dramatized in Chapter 1).
+# Mark every beat blurb_only until scripted in prose.
+
+series_teaser_from_blurb:
+  source: content.md
+  status: blurb_only
+  suggested_runtime_sec: 45_to_90
+  voice_over_announcer_optional:
+    tone: "gravel hope vs dread; military SF trailer pacing"
+    sample_line_paraphrase: "When the war moves on, someone still picks through the shooting."
+  sfx_mood_board:
+    - distant_artillery_or_ship_turmoil_low
+    - mech_hydraulic_weight
+    - cockpit_alarm_single_chirp_then_cut
+    - boots_on_metal_run_then_drop_to_silence
+  character_presence_future_cast:
+    - id: empire_pilot
+      note: "Not in ch1 audio pack; reserve distinct voice register vs Bam."
+    - id: fleet_authorities
+      note: "Voice on comms only until cast; keep faceless intimidation."
+  legal_note: "Do not treat blurb as locked continuity until chapters confirm details."

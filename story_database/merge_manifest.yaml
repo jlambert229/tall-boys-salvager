@@ -1,0 +1,30 @@
+# Load order for merging into a single document (e.g. scripts, LLM context).
+# Each entry: filename (under story_database/) and the top-level key it contributes.
+
+merge_order:
+  - file: meta.yaml
+    keys: [meta, sources]
+  - file: characters.yaml
+    keys: [characters]
+  - file: factions.yaml
+    keys: [factions]
+  - file: locations.yaml
+    keys: [locations]
+  - file: technology_and_equipment.yaml
+    keys: [technology_and_equipment]
+  - file: items_props.yaml
+    keys: [items_props]
+  - file: language_and_phrases.yaml
+    keys: [language_and_phrases]
+  - file: themes.yaml
+    keys: [themes]
+  - file: timeline_in_universe.yaml
+    keys: [timeline_in_universe]
+  - file: plot_hooks.yaml
+    keys: [plot_hooks]
+  - file: tone_and_genre.yaml
+    keys: [tone_and_genre]
+
+# Audio drama YAML lives under audio_drama/ and is intentionally NOT merged into
+# one flat canon doc (different consumers). See audio_drama/README.md.
+optional_audio_bundle_dir: audio_drama

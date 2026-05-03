@@ -1,0 +1,20 @@
+plot_hooks:
+  - id: empire_pilot
+    summary: "Galactic empire pilot crash lands in Bam's zone; saving her has personal cost."
+    status: blurb_only
+    sources: [blurb]
+
+  - id: authority_betrayal_risk
+    summary: "Bam must earn pilot trust so she does not turn him and Sketch in to fleet authorities."
+    status: blurb_only
+    sources: [blurb]
+
+  - id: sketch_scrutiny
+    summary: "Construction robot has enough AI to draw unwanted attention."
+    status: blurb_only
+    sources: [blurb]
+
+  - id: escalation_promise
+    summary: "When things go wrong they get worse (tone promise)."
+    status: blurb_only
+    sources: [blurb]

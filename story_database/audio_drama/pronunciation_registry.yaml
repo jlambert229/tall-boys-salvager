@@ -1,0 +1,77 @@
+# Actor and announcer prompts. IPA omitted on purpose; use director-friendly syllables.
+
+pronunciation_registry:
+  - term: Yorp
+    type: city_name
+    prompt: "YORP (one sharp syllable, rhymes with warp)"
+    notes: "Capital of Bam's world in his framing."
+
+  - term: Vaux VI
+    type: planet_name
+    prompt: "VOH six, or VOH vee-eye if you prefer Roman numerals read literally"
+    notes: "Iton lecture; optional slight French vowel on Vaux if cast likes."
+
+  - term: Bameron Kold
+    type: character_name
+    prompt: "BAM-err-on COLD"
+    nickname: "Bam is single syllable BAM"
+
+  - term: Sketch
+    type: robot_name
+    prompt: "SKETCH, one word like the drawing"
+
+  - term: Uncle Iton
+    type: character_name
+    prompt: "EYE-tun (two syllables, stress on first) or IH-tun; pick one table-wide"
+    notes: "Lock early in series bible."
+
+  - term: Grams
+    type: character_name
+    prompt: "GRAMS as in grandmother"
+
+  - term: C-FEF
+    type: acronym
+    prompt: "See Eff Ee Eff (letter names) or SEE-fef as one word if troops say fast"
+    notes: "Text also ties to fleet phrase below."
+
+  - term: Capian First Expeditionary Fleet
+    type: in_world_phrase
+    prompt: "CAY-pee-an First Ex-peh-DISH-un-ary Fleet"
+    notes: "Spelled Capian in manuscript; treat as in-world corruption of Captain unless you retcon print."
+
+  - term: UPV
+    type: acronym
+    prompt: "You Pee Vee"
+
+  - term: ROV6
+    type: acronym
+    prompt: "R Oh Vee Six"
+
+  - term: MCR
+    type: equipment
+    prompt: "Em See Are"
+
+  - term: MSR
+    type: equipment
+    prompt: "Em Ess Are"
+
+  - term: Donkey Kong
+    type: borrowed_phrase
+    prompt: "Standard English game title pronunciation; characters treat phrase as nonsense relic."
+
+  - term: Happyville
+    type: sarcastic_place
+    prompt: "HAP-pee-ville, bright then flat sarcasm"
+
+  - term: Wash-o-World
+    type: signage
+    prompt: "WASH-oh-world, slightly ridiculous jingle optional"
+
+  - term: Suzzie Keener
+    type: character_name
+    prompt: "SUZ-ee KEENER"
+    notes: "Mention only in ch1."
+
+  - term: Tommy / Samantha
+    type: character_name
+    prompt: "TAH-mee / sam-AN-tha"

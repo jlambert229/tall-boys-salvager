@@ -1,0 +1,34 @@
+# ElevenLabs Text-to-Dialogue (eleven_v3) voice routing for Salvager Chapter 1.
+# Replace every elevenlabs_voice_id with a real ID from the ElevenLabs dashboard (Voice Lab → Add to list → copy ID).
+
+elevenlabs:
+  # Text-to-Dialogue API: only eleven_v3. See README.md.
+  model_id: eleven_v3
+  max_chars_per_request: 2000
+  # Optional seed for reproducibility (integer). Omit or null to let the API vary.
+  seed: null
+  # Per-request voice settings (if your client supports DialogueInput settings; SDK may vary).
+  default_voice_settings:
+    stability: 0.45
+    similarity_boost: 0.75
+    style: 0.0
+    use_speaker_boost: true
+
+voices:
+  # Bam spoken lines (aloud to Sketch, Iton in room, mutter, canopy line).
+  bam:
+    elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
+    notes: "Young adult male, dry humor, conversational."
+
+  # Internal monologue: same actor as bam is typical; use a second clone if you want contrast.
+  bam_interior:
+    elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM
+    notes: "Optional [thoughtful] or [quietly] tags in text; see README."
+
+  sketch:
+    elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
+    notes: "Nonhuman, precise, dry; consider slightly lower stability for more variation."
+
+  uncle_iton:
+    elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
+    notes: "Elder male storyteller; cough can be [coughs] audio tag before next line if split."

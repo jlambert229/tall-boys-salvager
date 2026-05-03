@@ -1,0 +1,15 @@
+items_props:
+  - id: salvage_tools
+    type: gear
+    note: "Packed before leaving alley."
+    sources: [cp_01]
+
+  - id: paper_pad
+    type: consumable
+    note: "Last decent pad for doodling."
+    sources: [cp_01]
+
+  - id: spray_cans
+    type: graffiti_tool
+    note: "Bam willing to confiscate from friends who tag over murals."
+    sources: [cp_01]

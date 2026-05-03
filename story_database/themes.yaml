@@ -1,0 +1,24 @@
+themes:
+  - id: survival_aftermath
+    summary: "Salvage amid active and latent violence; city as total environment."
+    sources: [cp_01, blurb]
+
+  - id: machine_human_bond
+    summary: "Bam denies friendship as cognition while relying on Sketch emotionally and tactically."
+    sources: [cp_01]
+
+  - id: unreliable_oral_history
+    summary: "Elders blend fact, brag, and nonsense; Iton omits what he does not know."
+    sources: [cp_01]
+
+  - id: legal_moral_salvage
+    summary: "Salvager vs looter framing; respect for dead soldiers' gear."
+    sources: [cp_01]
+
+  - id: scale_and_control
+    summary: "Measuring the world in body lengths as anxiety regulation."
+    sources: [cp_01]
+
+  - id: class_and_generation
+    summary: "Elders vs soft youth; luxury as legend."
+    sources: [cp_01]

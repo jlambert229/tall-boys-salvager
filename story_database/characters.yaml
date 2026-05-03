@@ -1,0 +1,96 @@
+characters:
+  - id: bameron_kold
+    names:
+      primary: Bameron Kold
+      nicknames: [Bam]
+    role: protagonist
+    age: 19
+    affiliation: Yorpers
+    occupation: salvager
+    voice: first_person_narrator
+    self_image:
+      - reckless
+      - hardworking
+      - funny
+      - accessible
+    facts:
+      - "Lived all nineteen years in contested zones."
+      - "Not afraid to fight; senses a higher calling after recent events (unspecified in ch1)."
+      - "Uses heel-to-toe pacing to convert meters to feet for comfort and scale."
+      - "Doodles when bored during stories (e.g. robot dinosaur eating pop-tarts)."
+    relationships:
+      sketch: best_friend_partner
+      uncle_iton: nephew_uncle_storyteller
+      grams: grandson_grandmother_snark_about_iton
+      tommy: uncle_nephew
+      samantha: uncle_niece
+    sources: [cp_01]
+
+  - id: sketch
+    names:
+      primary: Sketch
+      nicknames: [Metal Dude]
+    role: deuteragonist
+    type: construction_robot
+    height_meters: 7
+    traits:
+      - sarcastic
+      - literal_about_identity
+      - attuned_to_bam_moods
+      - sometimes_withholds_clarifying_questions
+    capabilities:
+      - lift_and_carry
+      - dig_rig_out_of_collapses
+      - break_things_when_needed
+      - scan_and_assess_streets
+    appearance_notes:
+      - camera_eyes
+      - can_read_as_glowing_or_reflecting_at_dusk
+      - tinny_voice_from_shadows
+    relationships:
+      bameron_kold: partner_salvage_crew
+    sources: [cp_01]
+
+  - id: uncle_iton
+    names:
+      primary: Uncle Iton
+    role: elder_oral_historian
+    traits:
+      - long_winded_fireside_storyteller
+      - claims_historical_accuracy
+      - gaps_in_knowledge_he_does_not_admit
+    relationships:
+      bameron_kold: nephew
+      tommy_samantha: uncle
+    sources: [cp_01]
+
+  - id: grams
+    names:
+      primary: Grams
+    role: family_elder
+    traits:
+      - snarks_that_iton_does_not_know_shit_about_sunshine
+    relationships:
+      bameron_kold: grandson
+    sources: [cp_01]
+
+  - id: tommy
+    names:
+      primary: Tommy
+    role: minor_family
+    note: "Nephew; giggles at pop-tart jokes."
+    sources: [cp_01]
+
+  - id: samantha
+    names:
+      primary: Samantha
+    role: minor_family
+    note: "Niece; giggles at pop-tart jokes."
+    sources: [cp_01]
+
+  - id: suzzie_keener
+    names:
+      primary: Suzzie Keener
+    role: mentioned_only
+    note: "Her uncle knows someone who met a rancher with donkeys."
+    sources: [cp_01]

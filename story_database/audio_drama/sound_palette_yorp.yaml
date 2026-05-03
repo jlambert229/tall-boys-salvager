@@ -1,0 +1,65 @@
+# Recurring sound vocabulary for Yorp (Chapter 1 scrape + reusable stems).
+
+sound_palette_yorp:
+  ambiences:
+    - id: yorp_twilight_distant_war
+      description: "Low urban ruin bed: wind through broken windows, distant occasional pops not close enough to localize, rare metal creak from leaning towers."
+      story_sources: [cp_01]
+    - id: alley_dead_end_close_walls
+      description: "Shorter reverb than open street; drips, rats optional (Bam imagines rats as grease source)."
+      story_sources: [cp_01]
+    - id: fire_ring_community
+      description: "Fire crackle forward; human walla low; cloth shifts, kids small movements."
+      story_sources: [cp_01, cp_01_screenplay]
+    - id: post_tracer_hush
+      description: "Sudden near-silence after ripping passes; emphasize absence of treads and explosions."
+      story_sources: [cp_01]
+
+  mechanical:
+    - id: sketch_biped
+      description: "Heavy hydraulic weight shifts, controlled servo whine, footfalls with ground stress; camera-eye tiny glassy focus motors optional."
+      story_sources: [cp_01]
+    - id: salvage_rig_exterior
+      description: "Patched hull ticks cooling; occasional hydraulic bleed; tools clink."
+      story_sources: [cp_01]
+    - id: salvage_rig_canopy_interior
+      description: "Canopy clang close; ventilation fan steady; camera systems power-up flutter; slight cockpit hum."
+      story_sources: [cp_01]
+
+  weapons_distant:
+    - id: kinetic_tracer_pass
+      description: "Three-part ripping whip overhead, doppler subtle if fast; no impact; no return fire in scene."
+      story_sources: [cp_01]
+
+  negative_cues_absence:
+    - id: no_mcr_footsteps
+      description: "After tracers, explicitly no heavy mech walker rhythm, no tracked vehicle grind."
+      story_sources: [cp_01]
+    - id: no_explosion_after_tracers
+      description: "No shell impact; keeps dread in the empty beat."
+      story_sources: [cp_01]
+
+  foley_specific_ch1:
+    - id: grease_scrape_on_metal
+      description: "Rag or blade on greasy plates; faint sticky sound; blood not emphasized as wet gore if you want PG-13 audio."
+      story_sources: [cp_01]
+    - id: paper_doodle_scratch
+      description: "Pencil on last good pad during Iton lecture."
+      story_sources: [cp_01]
+    - id: heel_toe_measure_pace
+      description: "Boots on grit, deliberate count; can sync with Bam explanation."
+      story_sources: [cp_01]
+
+  voice_world_adr:
+    - id: graffiti_read_aloud_optional
+      description: "Background teen mischief reading 'Chucky was here' and absurd 'Bulgy Babe 5' tag as distant shout or stencil spray; optional, can clutter mix."
+      story_sources: [cp_01]
+
+  music_direction_general:
+    - mood_board:
+        - "Twilight salvage: sparse pulses, metal percussion, low strings."
+        - "Fire memory: warmer narrow band, acoustic leaning, still uneasy undertone."
+        - "History lecture: subtle pulse like documentary then sting on Donkey Kong absurdity."
+        - "Post-tracer: drop music to near zero for 3 to 5 seconds."
+        - "End beat: cautious lift into movement, not victory fanfare."
+    story_sources: [cp_01, tone_and_genre]
