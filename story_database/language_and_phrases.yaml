@@ -1,8 +1,8 @@
 language_and_phrases:
-  - id: on_like_donkey_kong
-    text: "on like Donkey Kong"
+  - id: on_like_donkey_cong
+    text: "on like Donkey Cong"
     kind: archaic_exclamation
-    note: "Donkeys real; kong meaningless to youth."
+    note: "In-world corrupted catchphrase; donkeys real in rumor; cong is nonsense syllable to youth. Avoids third-party game title in audio distribution."
     sources: [cp_01]
 
   - id: killed_to_death

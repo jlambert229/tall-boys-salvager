@@ -110,9 +110,15 @@ Vaux VI struggled for the first hundred years of colonization, a key period for 
 He coughs for effect.
 
 ITON  
-After that, it was, as the ancients sometimes said, on like Donkey Kong.
+After that, it was, as the ancients sometimes said, on like Donkey Cong.
 
-Murmurs. Someone mouths "donkey." Someone mouths "kong."
+Murmurs. Someone mouths "donkey." Someone mouths "cong."
+
+TOMMY  
+Uncle Iton, what is a cong?
+
+ITON  
+If I knew, I would charge admission. Pay attention.
 
 ITON  
 War broke out, and every soul on the atmospherically friendly space rock cleared their calendars for two hundred years. The yellow sun rose and fell without passing judgment. To some, a sad deity watching her favorite child march toward needless self-destruction.
@@ -149,7 +155,7 @@ Bam's attention drifts. He doodles on a last good pad.
 ITON  
 Exoskeletons that let each soldier carry more guns, bullets, and contraband pop-tarts had to be armored. Weapons upgraded. Fighting intensified.
 
-The KIDS laugh at "pop-tarts." Bam draws a robot dinosaur eating pastries. TOMMY and SAMANTHA smother giggles. Nobody interrupts Iton.
+The KIDS laugh at "pop-tarts." Bam draws a robot dinosaur eating pastries. TOMMY and SAMANTHA smother giggles. Iton does not break stride.
 
 ITON  
 That led to modern-day battle knights stomping across the ruined landscape in mechanized combat rigs five meters high.

@@ -15,20 +15,29 @@ elevenlabs:
     use_speaker_boost: true
 
 voices:
+  # Full persona briefs: ../voice_profiles.yaml (character_id matches keys below where named).
   # Bam spoken lines (aloud to Sketch, Iton in room, mutter, canopy line).
   bam:
     elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
-    notes: "Young adult male, dry humor, conversational."
+    notes: "character_id bameron_kold: alley banter, muttered rules, canopy closer; conversational mid, joke armor."
 
   # Internal monologue: same actor as bam is typical; use a second clone if you want contrast.
   bam_interior:
     elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM
-    notes: "Optional [thoughtful] or [quietly] tags in text; see README."
+    notes: "character_id bameron_kold interior lane: [quietly] / [thoughtful] optional; softer on death, Iton, boots ethics."
 
   sketch:
     elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
-    notes: "Nonhuman, precise, dry; consider slightly lower stability for more variation."
+    notes: "character_id sketch: precise, tinny when shadowed; deadpan not cartoon; lower stability if too smooth."
 
   uncle_iton:
     elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
-    notes: "Elder male storyteller; cough can be [coughs] audio tag before next line if split."
+    notes: "character_id uncle_iton: elder storyteller, cough as stage beat; silence after Capian question."
+
+  tommy:
+    elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
+    notes: "character_id tommy: child boy; one scripted interrupt; giggles stifled with Samantha."
+
+  samantha:
+    elevenlabs_voice_id: REPLACE_WITH_VOICE_UUID
+    notes: "character_id samantha: child girl; walla laughs distinct from Tommy; no solo line in ch1 script."

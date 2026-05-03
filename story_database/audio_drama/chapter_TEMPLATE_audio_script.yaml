@@ -1,0 +1,46 @@
+# DUPLICATE to chapter_NN_audio_script.yaml (example below uses chapter 2).
+# Replace episode numbers, ids CH2-* -> CHN-*, and block_id_prefix to match chapter N.
+
+chapter: 2
+title: REPLACE_CHAPTER_TITLE
+primary_sources: [../cp_02.md, ../cp_02_screenplay.md]
+
+serialization:
+  series_slug: salvager_audio
+  episode_code: SAL-1x02
+  episode_index: 2
+  chapter_canon_number: 2
+  installment_title_template: "Salvager {episode_code}: {chapter_title}"
+  block_id_prefix: CH2
+  requires_chapters:
+    - 1
+  cold_open:
+    type: none
+    note: "Pick none | short_recap | stinger; align with prior chapter ending_hook."
+  ending_hook:
+    story_beats: []
+    narrative_carry: []
+    suggested_next_file: chapter_03_audio_script.yaml
+  feed_hints:
+    episode_type: full
+    is_serial_mandatory_order: true
+
+production_targets:
+  target_runtime_min: [24, 40]
+  explicit_content: false
+  rating_note: ""
+  release_bundle: []
+
+format_notes:
+  - "Add chapter-specific notes; keep serialization block in sync with serialization_series.yaml play_order."
+
+blocks:
+  - id: CH2-A01
+    slug: "REPLACE_SCENE_SLUG"
+    story_beat: "First beat of chapter 2."
+    duration_hint_sec: 0
+    lines: []
+    direction_notes: "Expand or replace; remove empty lines: [] when you add dialogue."
+
+# continuity_flags_for_future_episodes:
+#   - "Threads that pay off in chapter 3+."

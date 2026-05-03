@@ -25,6 +25,9 @@ sound_palette_yorp:
     - id: salvage_rig_canopy_interior
       description: "Canopy clang close; ventilation fan steady; camera systems power-up flutter; slight cockpit hum."
       story_sources: [cp_01]
+    - id: salvage_rig_canopy_interior_sequence
+      description: "Ordered chapter-out stinger: (1) canopy latch clang and hinge stress, (2) ventilation fan ramps, (3) seat harness or strap slap, (4) exterior camera power flutter, (5) throttle idle rise with low Sketch footfall tail. Use as one designed layer or split stems."
+      story_sources: [cp_01, chapter_01_audio_script]
 
   weapons_distant:
     - id: kinetic_tracer_pass
@@ -56,10 +59,10 @@ sound_palette_yorp:
       story_sources: [cp_01]
 
   music_direction_general:
-    - mood_board:
-        - "Twilight salvage: sparse pulses, metal percussion, low strings."
-        - "Fire memory: warmer narrow band, acoustic leaning, still uneasy undertone."
-        - "History lecture: subtle pulse like documentary then sting on Donkey Kong absurdity."
-        - "Post-tracer: drop music to near zero for 3 to 5 seconds."
-        - "End beat: cautious lift into movement, not victory fanfare."
+    mood_board:
+      - "Twilight salvage: sparse pulses, metal percussion, low strings."
+      - "Fire memory: warmer narrow band, acoustic leaning, still uneasy undertone."
+      - "History lecture: subtle pulse like documentary then sting on Donkey Cong absurdity."
+      - "Post-tracer: drop music to near zero for 3 to 5 seconds."
+      - "End beat: cautious lift into movement, not victory fanfare."
     story_sources: [cp_01, tone_and_genre]

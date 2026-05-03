@@ -22,6 +22,8 @@ This folder wires **Salvager** audio drama text to **ElevenLabs** in two support
 | `bam_interior` | Internal monologue (`BAM (V.O.)`). Often the **same** `voice_id` as `bam`; use a second voice only if you want a clear “head voice.” |
 | `sketch` | All `SKETCH` lines. |
 | `uncle_iton` | All `ITON` lines. |
+| `tommy` | `TOMMY` in screenplay (fire ring). |
+| `samantha` | `SAMANTHA` if you add spoken lines later (walla-only in Chapter 1 as written). |
 
 Fill **`elevenlabs_voice_id`** with UUIDs from the ElevenLabs app (Voice Library or your clones).
 
@@ -39,16 +41,27 @@ Do **not** rely on brackets for full sound design; keep explosions, footfalls, a
 
 ### Chunked JSON for the API
 
-From repo root (or `salvager/`):
+From `salvager/` (install PyYAML only if you use `--chapter-yaml`):
 
 ```bash
+pip install -r scripts/requirements-export.txt   # once, if using --chapter-yaml
+
 python3 scripts/export_elevenlabs_chapter1.py \
   --screenplay cp_01_screenplay.md \
   --voice-map story_database/audio_drama/elevenlabs/voice_map.yaml \
   --out story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json
 ```
 
-The script emits **arrays of `{ "voice_id", "text" }`** per chunk, each chunk under the character budget. If any `voice_id` is still `REPLACE_`, it prints a warning.
+Optional: export from the beat YAML after you confirm it matches the screenplay (order is `lines` then `vo_over` per block):
+
+```bash
+python3 scripts/export_elevenlabs_chapter1.py \
+  --chapter-yaml story_database/audio_drama/chapter_01_audio_script.yaml \
+  --voice-map story_database/audio_drama/elevenlabs/voice_map.yaml \
+  --out story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.yaml_source.json
+```
+
+The script emits **arrays of `{ "voice_id", "text" }`** per chunk, each chunk under the character budget. If any `voice_id` is still `REPLACE_`, it prints a warning. JSON field `source` records which file was used.
 
 ### Minimal Python client sketch (pseudo-contract)
 

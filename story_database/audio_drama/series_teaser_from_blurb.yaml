@@ -1,7 +1,9 @@
 # Optional trailer or cold-open material from content.md (not dramatized in Chapter 1).
 # Mark every beat blurb_only until scripted in prose.
+# Serialization: use between installments or before 1x01; see serialization_series.yaml optional_between_episodes.
 
 series_teaser_from_blurb:
+  series_slug: salvager_audio
   source: content.md
   status: blurb_only
   suggested_runtime_sec: 45_to_90

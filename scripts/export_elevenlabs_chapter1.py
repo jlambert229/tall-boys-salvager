@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 """
-Export Salvager cp_01_screenplay.md to ElevenLabs Text-to-Dialogue sized chunks.
+Export Salvager Chapter 1 dialogue to ElevenLabs Text-to-Dialogue sized chunks.
 
 Docs: eleven_v3 only; sum of inputs[].text <= 2000 chars per request.
-Outputs JSON: { "model_id", "chunks": [ { "chunk_index", "char_total", "inputs": [ { "voice_key"|"voice_id", "text" } ] } ] }
+Outputs JSON: { "model_id", "chunks": [ { "chunk_index", "char_total", "inputs": [ ... ] } ] }
 
-Usage:
+Sources (pick one):
+  --screenplay   cp_01_screenplay.md (SKETCH|BAM|ITON|TOMMY|SAMANTHA blocks).
+  --chapter-yaml chapter_01_audio_script.yaml (requires PyYAML: pip install -r requirements-export.txt).
+
+Usage (screenplay):
   python3 export_elevenlabs_chapter1.py --screenplay ../cp_01_screenplay.md \\
+    --voice-map ../story_database/audio_drama/elevenlabs/voice_map.yaml \\
+    --out ../story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json
+
+Usage (YAML, after sync check):
+  python3 export_elevenlabs_chapter1.py --chapter-yaml ../story_database/audio_drama/chapter_01_audio_script.yaml \\
     --voice-map ../story_database/audio_drama/elevenlabs/voice_map.yaml \\
     --out ../story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json
 """
@@ -19,9 +28,14 @@ import re
 import sys
 from pathlib import Path
 
+try:
+    import yaml  # type: ignore
+except ImportError:
+    yaml = None  # type: ignore
+
 
 SPEAKER_LINE = re.compile(
-    r"^(?P<name>SKETCH|BAM|ITON)(?P<vo>\s+\(V\.O\.\))?\s*$"
+    r"^(?P<name>SKETCH|BAM|ITON|TOMMY|SAMANTHA)(?P<vo>\s+\(V\.O\.\))?\s*$"
 )
 
 
@@ -68,15 +82,97 @@ def screenplay_to_segments(screenplay: str) -> list[dict[str, str]]:
         text = " ".join(x.strip() for x in body_lines if x.strip())
         if not text:
             continue
-        if name == "SKETCH":
-            vk = "sketch"
-        elif name == "ITON":
-            vk = "uncle_iton"
-        elif name == "BAM":
-            vk = "bam_interior" if is_vo else "bam"
-        else:
+        vk = _screenplay_name_to_voice_key(name, is_vo)
+        if vk:
+            segments.append({"voice_key": vk, "text": text})
+    return segments
+
+
+def _screenplay_name_to_voice_key(name: str, is_vo: bool) -> str | None:
+    if name == "SKETCH":
+        return "sketch"
+    if name == "ITON":
+        return "uncle_iton"
+    if name == "TOMMY":
+        return "tommy"
+    if name == "SAMANTHA":
+        return "samantha"
+    if name == "BAM":
+        return "bam_interior" if is_vo else "bam"
+    return None
+
+
+def _normalize_block_text(text: object) -> str:
+    if not isinstance(text, str):
+        return ""
+    return " ".join(text.split())
+
+
+def _yaml_line_to_voice_key(speaker: str, line_type: str | None) -> str | None:
+    sp = (speaker or "").strip().lower()
+    lt = (line_type or "dialogue").strip().lower()
+    if sp == "bameron_kold":
+        return "bam"
+    if sp == "sketch":
+        return "sketch"
+    if sp == "uncle_iton":
+        return "uncle_iton"
+    if sp == "tommy":
+        return "tommy"
+    if sp == "samantha":
+        return "samantha"
+    if sp == "grams":
+        return "bam_interior"
+    if sp == "crowd_chorus":
+        return "uncle_iton"
+    if lt == "stage_business" and sp == "uncle_iton":
+        return "uncle_iton"
+    return None
+
+
+def chapter_yaml_to_segments(
+    data: dict, *, include_optional_grams: bool
+) -> list[dict[str, str]]:
+    """Flatten chapter blocks: each block's `lines` in order, then `vo_over` in order."""
+    segments: list[dict[str, str]] = []
+    blocks = data.get("blocks")
+    if not isinstance(blocks, list):
+        return segments
+
+    for block in blocks:
+        if not isinstance(block, dict):
             continue
-        segments.append({"voice_key": vk, "text": text})
+
+        for item in block.get("lines") or []:
+            if not isinstance(item, dict):
+                continue
+            speaker = str(item.get("speaker", ""))
+            line_type = item.get("type")
+            text = _normalize_block_text(item.get("text"))
+            if not text:
+                continue
+            vk = _yaml_line_to_voice_key(speaker, str(line_type) if line_type else None)
+            if not vk:
+                continue
+            segments.append({"voice_key": vk, "text": text})
+
+        for item in block.get("vo_over") or []:
+            if not isinstance(item, dict):
+                continue
+            speaker = str(item.get("speaker", ""))
+            text = _normalize_block_text(item.get("text"))
+            if not text:
+                continue
+            if speaker.lower() == "bameron_kold":
+                segments.append({"voice_key": "bam_interior", "text": text})
+
+        opt = block.get("optional_insert_line")
+        if include_optional_grams and isinstance(opt, dict):
+            sp = str(opt.get("speaker", "")).lower()
+            text = _normalize_block_text(opt.get("text"))
+            if sp == "grams" and text:
+                segments.append({"voice_key": "bam_interior", "text": f"[as Grams] {text}"})
+
     return segments
 
 
@@ -88,7 +184,6 @@ def pack_chunks(
     total = 0
     for seg in segments:
         t = seg["text"]
-        # +1 for newline between joined parts in some APIs; keep margin
         overhead = 2 if current else 0
         if total + overhead + len(t) > max_chars and current:
             chunks.append(current)
@@ -103,7 +198,13 @@ def pack_chunks(
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--screenplay", type=Path, required=True)
+    src = ap.add_mutually_exclusive_group(required=True)
+    src.add_argument("--screenplay", type=Path, help="Fountain-style screenplay with SKETCH|BAM|ITON|TOMMY|SAMANTHA headers.")
+    src.add_argument(
+        "--chapter-yaml",
+        type=Path,
+        help="chapter_01_audio_script.yaml (needs: pip install -r scripts/requirements-export.txt).",
+    )
     ap.add_argument("--voice-map", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
     ap.add_argument(
@@ -117,12 +218,35 @@ def main() -> int:
         action="store_true",
         help="Emit voice_key instead of voice_id (skip voice map resolution).",
     )
+    ap.add_argument(
+        "--include-grams-insert",
+        action="store_true",
+        help="With --chapter-yaml: include optional_insert_line blocks (e.g. Grams) as bam_interior.",
+    )
     args = ap.parse_args()
 
-    raw = args.screenplay.read_text(encoding="utf-8")
-    segments = screenplay_to_segments(raw)
+    if args.screenplay:
+        raw = args.screenplay.read_text(encoding="utf-8")
+        segments = screenplay_to_segments(raw)
+        source_label = str(args.screenplay)
+    else:
+        if yaml is None:
+            print(
+                "PyYAML is required for --chapter-yaml. Install: pip install -r scripts/requirements-export.txt",
+                file=sys.stderr,
+            )
+            return 1
+        raw_yaml = yaml.safe_load(args.chapter_yaml.read_text(encoding="utf-8"))
+        if not isinstance(raw_yaml, dict):
+            print("chapter YAML root must be a mapping.", file=sys.stderr)
+            return 1
+        segments = chapter_yaml_to_segments(
+            raw_yaml, include_optional_grams=args.include_grams_insert
+        )
+        source_label = str(args.chapter_yaml)
+
     if not segments:
-        print("No speaker segments parsed. Check screenplay format.", file=sys.stderr)
+        print("No speaker segments parsed. Check source format.", file=sys.stderr)
         return 1
 
     voice_ids, model_id = load_voice_ids(args.voice_map)
@@ -162,7 +286,7 @@ def main() -> int:
         "model_id": model_id,
         "max_chars_per_request_doc": 2000,
         "export_max_chars_used": args.max_chars,
-        "source_screenplay": str(args.screenplay),
+        "source": source_label,
         "chunks": out_chunks,
     }
 

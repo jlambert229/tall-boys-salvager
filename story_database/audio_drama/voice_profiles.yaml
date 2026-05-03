@@ -1,74 +1,151 @@
-# Voice and casting notes (scraped from ch1 prose and screenplay).
-# gender_voice: how casting sides might read; adjust to your production values.
+# Persona bible: Chapter 1 audio drama (Salvager).
+# Casting sides, performance intent, and mic posture. Pronunciation prompts live in pronunciation_registry.yaml.
+#
+# chapter_01_audio_script.yaml speaker keys -> character_id:
+#   bameron_kold -> bameron_kold
+#   sketch -> sketch
+#   uncle_iton -> uncle_iton
+#   tommy -> tommy
+#   samantha -> samantha (walla in ch1; no solo line in script yet)
+#   grams -> grams (optional_insert_line only; usually folded into Bam interior)
+#
+# ElevenLabs voice_map keys (API): bam, bam_interior, sketch, uncle_iton, tommy, samantha
 
 voice_profiles:
   - character_id: bameron_kold
+    display_name: "Bam (Bameron Kold)"
+    yaml_speaker_key: bameron_kold
     story_role: protagonist_narrator
+    essence: "Nineteen-year-old salvage runner who jokes to stay sane, then drops the joke when death, family, or Iton show up."
     apparent_age: 19
     gender_voice: male_young_adult
+    relationships:
+      sketch: "Partner bot; best friend in practice, denied in anxious interior."
+      uncle_iton: "Elder and moral anchor; loves him, sees through his gaps."
+      grams: "Grandmother figure; memory voice for blunt truth."
+      yorp: "Lifelong home; contested zones are normal background, not adventure tourism."
     register: conversational_mid_range
-    accent_notes: "Urban ruined-city Yorp; no dialect specified in text. Cast can use neutral contemporary American or director choice; keep intelligibility for SFF terms."
+    accent_notes: "Urban ruined-city Yorp; no dialect mandated. Neutral contemporary American or director pick; prioritize SFF term clarity (C-FEF, MCR, MSR, Capian)."
+    wants_in_chapter_1: "Hold both swagger and shame in the same breath; land boots-and-looters ethics without sounding preachy."
     performance_notes:
-      - "Heavy internal monologue: irony, self-deprecation, brag moments ('extraordinarily handsome') delivered as joke armor."
-      - "Shifts to softer introspection when discussing death, collapses, family boots, and Iton not knowing things."
-      - "Rhythmic heel-to-toe pacing can be **foley plus** soft spoken counts under breath, not only V.O."
-      - "Mutters rules while cleaning Sketch: intimate close-mic."
-      - "Ends chapter on forced optimism ('Tonight is going to be the best yet') with energy that can read as hope or denial."
+      - "Interior (V.O.): irony and self-deprecation; brag beats are armor, not confession."
+      - "Interior softens on collapses, blood in grease, Iton not knowing, stranger-in-boots ethics."
+      - "Spoken lines to Sketch: shorter clauses, banter rhythm; do not read interior pace aloud."
+      - "Heel-to-toe measurement: can be half-whisper dialogue plus foley, not only V.O."
+      - "Rig canopy closer: forced optimism ('best yet') readable as hope, denial, or both."
     vo_vs_dialogue:
       narration_share: high
       dialogue_counterparts: [sketch, uncle_iton_in_flashback]
     mic_notes:
-      - "Rig interior: slightly boxy optional filter after canopy closes; fan bed under dialogue."
+      - "Interior: slightly drier, less room than alley dialogue if same actor (highpass or close stack)."
+      - "Rig interior: optional gentle boxiness; steady low fan under final line."
 
   - character_id: sketch
-    story_role: deuteragonist
+    yaml_speaker_key: sketch
+    story_role: deuteragonist_construct
+    essence: "Seven-meter construction biped: precise language, deadpan cruelty to biological vanity, loyalty shown through competence not sentiment."
     gender_voice: nonhuman_construct
-    register: "Text: tinny voice from shadows; precise, formal diction; dry sarcasm ('like one of my more sarcastic uncles')."
-    processing_notes:
-      - "Not a smooth assistant voice: slight metallic edge, small room ring off alley walls."
-      - "Long pause beat before 'All is well, Bam' after scan: hold silence for tension."
-      - "Silent protocol after tracers: no filler beeps unless you establish earlier; text says Sketch remains silent."
+    relationships:
+      bameron_kold: "Charge and verbal sparring partner; tolerates nicknames but audits them for logic."
+    register: "Tinny, close-mic when half in shadow; formal diction; sarcasm without shout."
+    physical_metaphor: "Camera eyes, hydraulic weight, stillness that reads as judgment before he speaks."
+    wants_in_chapter_1: "Never explain the joke; let timing and flat delivery sell comedy and unease."
     performance_notes:
-      - "Lines like 'small, squishy biological' delivered flat, not angry."
-      - "Complaint about name change: prim, clipped."
+      - "'Small, squishy biological' and similar: flat, informational, not sneering."
+      - "Name lecture ('Sketch is a fine identifier'): prim, clipped, a little hurt underneath."
+      - "Destiny paragraph: same register; do not sentimentalize; Bam names the parallel to Iton in the next beat."
+    processing_notes:
+      - "Slight metallic edge or narrow EQ bump where voice meets Foley servos; avoid cartoon beep voice."
+      - "Ten-second scan beat before 'All is well': silence is performance; no filler bloops unless established earlier."
+      - "After tracers: silent protocol; no ad-lib chirps."
     sfx_coupling:
-      - "Optional subtle servo under lines when he moves; duck under words."
+      - "Optional subtle servo under motion lines; duck SFX under words."
 
   - character_id: uncle_iton
-    story_role: flashback_storyteller
+    yaml_speaker_key: uncle_iton
+    story_role: community_elder_storyteller
+    essence: "Fire-ring historian who uses jokes to teach; admits weight through what he refuses to explain."
     apparent_age: elder
     gender_voice: male_elder
-    register: "Fireside storyteller; rhetorical flourishes; cough for effect."
+    relationships:
+      bameron_kold: "Nephew figure in the room; teases on 'rhymes with slam' without cruelty."
+      crowd_yorpers_fire: "Holds the circle; expects attention, tolerates kids up to a point."
+    register: "Rhetorical lift for lecture, then dry landings for punchlines and absurd relic phrases."
+    wants_in_chapter_1: "Let Capian fleet question hang in real silence; brush Tommy forward without losing the room."
     performance_notes:
-      - "Vaux VI and war sections: epic tone without losing wry asides (Donkey Kong line)."
-      - "Slide toward Bam on 'rhymes with slam': intimate, teasing, not cruel."
-      - "Pop-tart bit: deadpan lecture over kids laughing."
-      - "Capian fleet question: let silence hang; he does not explain."
-    crowd_reaction: "Murmurs, chuckles, stifled kid giggles; walla low under Iton when crowd present."
+      - "Vaux VI opening: warm authority, not documentary monotone."
+      - "Donkey Cong beat: deliver as nonsense proverb elders repeat; enjoy the room not getting it."
+      - "Tommy interrupt: quick, fond cuff ('charge admission') then back to war story gravity."
+      - "Pop-tart / exoskeleton block: deadpan lecture over stifled laughs; do not compete with kids."
+      - "Capian question: no answer after line; hold uncomfortable pause."
+    crowd_reaction: "Murmurs and chuckles are support, not cover; record Iton dry first if budget allows."
 
   - character_id: grams
-    story_role: referenced_only_ch1
+    yaml_speaker_key: grams
+    story_role: referenced_elder_memory
+    essence: "Bam's grandmother voice in absentia: affection wrapped in profane honesty about Iton."
     gender_voice: female_elder_implied
-    register: "Crass warm aside about Iton; can be short V.O. insert during Bam memory without full scene."
+    relationships:
+      bameron_kold: "Grandson hears her in memory; she is not in the fire ring scene on mic unless cast expands."
+      uncle_iton: "Affectionate distrust: 'did not know shit about sunshine' is family ribbing, not villainy."
+    register: "Warm gravel, timing on the snicker; never cruel to Bam, sharp toward Iton's bluff."
+    ch1_audio_handling:
+      - "Default: Bam interior only (reported speech)."
+      - "If cast: one short insert line under optional_insert_line in CH1-A13; keep level under Bam memory bed."
+    wants_in_chapter_1: "If she appears, land the laugh in one beat without derailing the Iton thread."
 
   - character_id: tommy
-    story_role: crowd_family_flashback
+    yaml_speaker_key: tommy
+    story_role: community_child_fire_ring
+    essence: "Kid brave enough to interrupt the elder for a nonsense word; curiosity over manners."
+    apparent_age_band: "roughly 7 to 11 (director locks)"
     gender_voice: child_boy
-    performance_notes: "Suppressed giggles; hand over mouth foley."
+    relationships:
+      uncle_iton: "Great-uncle or community uncle figure; enough safety to ask a dumb question aloud."
+      samantha: "Giggle partner at pop-tart beat; keep distinct timing so two kids do not sound like one track doubled."
+    register: "Clear question, small room; not a stage whisper unless directed."
+    wants_in_chapter_1: "One interrupt ('what is a cong?') then yield; no extra ad-libs unless walla session adds them."
+    performance_notes:
+      - "Interrupt is earnest, not cheeky sitcom; he really wants the answer."
+      - "Suppressed giggles later: hand-over-mouth energy without blowing mic."
+    mic_notes: "Spot mic or close boom for line; walla pass can be farther if you split sessions."
 
   - character_id: samantha
-    story_role: crowd_family_flashback
+    yaml_speaker_key: samantha
+    story_role: community_child_fire_ring
+    essence: "Tommy's peer in the crowd; laughs at the same lecture, smothers giggles with him."
+    apparent_age_band: "roughly 7 to 11 (director locks)"
     gender_voice: child_girl
-    performance_notes: "Suppressed giggles; hand over mouth foley."
+    relationships:
+      tommy: "Shared pop-tart laugh; keep voice smaller and brighter than Tommy's, not a copy-pitch."
+      uncle_iton: "Audience to his lecture; does not interrupt in ch1 script."
+    register: "Walla and stifled laugh in ch1; if you add a line later, keep it shorter than Tommy's interrupt."
+    wants_in_chapter_1: "Establish distinct laugh print for stereo crowd bed; no solo dialogue required in ch1."
+    performance_notes:
+      - "Giggles: staccato, hand-muffled; avoid identical timing to Tommy (humanize the pair)."
 
   - character_id: crowd_yorpers_fire
-    story_role: walla_group
-    notes: "Kids on laps, adults passing 'something that is not quite hope' (screenplay). Low community walla, fire forward in mix."
+    story_role: ensemble_fire_ring
+    script_presence: "No dedicated speaker row in chapter_01_audio_script.yaml; realized as walla lists and fire_ring_community bed."
+    essence: "Neighbors at the ring: tired warmth, a little hope, enough history to chuckle on cue."
+    scale: "Small community (think single-digit to low teens of distinct voices in layers), not a stadium."
+    register: "Low under Iton; reactions on Donkey Cong murmur, chuckles on slam line, release after Tommy interrupt."
+    wants_in_chapter_1: "Support Iton without washing out Bam interior; see format_notes mix hierarchy."
+    performance_notes:
+      - "Record wild lines in batches: murmurs, single-word repeats, breath laughs."
+      - "Avoid everyone talking at once on top of Iton keywords."
 
   - character_id: suzzie_keener
-    story_role: mentioned_only
-    audio_handling: "No line in ch1; optional distant name-drop in crowd scene if you expand; not required."
+    story_role: rumor_chain_anchor
+    script_presence: "Named in Bam interior only in ch1; no walla line required."
+    essence: "Off-stage lore hook: her uncle's friend's rancher proves donkeys are real to Bam's generation."
+    gender_voice: "(no ch1 casting)"
+    ch1_audio_handling: "No voice in Chapter 1 unless you add optional distant name-drop in walla; not required for story."
 
-  - narrator_optional
+  - character_id: narrator_optional
     story_role: third_person_bridge
-    notes: "Prose is first person throughout. Screenplay uses Bam V.O. If you add a book narrator for marketing, keep distinct from Bam to avoid double-voice confusion."
+    script_presence: "Not used in Chapter 1 screenplay or beat YAML."
+    essence: "Hypothetical book trailer or marketing narrator; keep strictly separate from Bam if ever used."
+    performance_notes:
+      - "Prose is Bam-first; screenplay is Bam V.O."
+      - "Do not fold a third narrator into the same chain-of-thought EQ as bam_interior without a signed stylistic reason."

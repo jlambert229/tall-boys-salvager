@@ -28,6 +28,7 @@ pronunciation_registry:
   - term: Grams
     type: character_name
     prompt: "GRAMS as in grandmother"
+    notes: "Memory-only in ch1; salty affection. If cast for insert, match Bam family timbre without mimicking Bam."
 
   - term: C-FEF
     type: acronym
@@ -55,9 +56,10 @@ pronunciation_registry:
     type: equipment
     prompt: "Em Ess Are"
 
-  - term: Donkey Kong
-    type: borrowed_phrase
-    prompt: "Standard English game title pronunciation; characters treat phrase as nonsense relic."
+  - term: Donkey Cong
+    type: in_world_phrase
+    prompt: "DON-key CONG (rhymes with song); treat as nonsense relic elders quote, not a real product."
+    notes: "Replaces a real-world game title for audio and print safety; keep delivery as absurd proverb."
 
   - term: Happyville
     type: sarcastic_place
@@ -72,6 +74,12 @@ pronunciation_registry:
     prompt: "SUZ-ee KEENER"
     notes: "Mention only in ch1."
 
-  - term: Tommy / Samantha
+  - term: Tommy
     type: character_name
-    prompt: "TAH-mee / sam-AN-tha"
+    prompt: "TAH-mee, child voice; stress first syllable"
+    notes: "Fire ring: scripted interrupt asking what a cong is; also walla giggles with Samantha."
+
+  - term: Samantha
+    type: character_name
+    prompt: "sam-AN-tha; second syllable slightly brighter than common SAM-nuh-thuh"
+    notes: "Fire ring: walla and stifled laugh at pop-tart beat; pair with Tommy but distinct timbre."

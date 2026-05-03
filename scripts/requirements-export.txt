@@ -1,0 +1,2 @@
+# Optional: for export_elevenlabs_chapter1.py --chapter-yaml (PyYAML).
+PyYAML>=6.0.1

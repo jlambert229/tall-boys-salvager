@@ -3,7 +3,7 @@
   "model_id": "eleven_v3",
   "max_chars_per_request_doc": 2000,
   "export_max_chars_used": 1950,
-  "source_screenplay": "cp_01_screenplay.md",
+  "source": "cp_01_screenplay.md",
   "chunks": [
     {
       "chunk_index": 0,
@@ -118,7 +118,7 @@
     },
     {
       "chunk_index": 1,
-      "char_total": 1630,
+      "char_total": 1708,
       "inputs": [
         {
           "voice_id": "REPLACE_WITH_VOICE_UUID_OR_SAME_AS_BAM",
@@ -133,7 +133,17 @@
         {
           "voice_id": "REPLACE_WITH_VOICE_UUID",
           "voice_key": "uncle_iton",
-          "text": "After that, it was, as the ancients sometimes said, on like Donkey Kong."
+          "text": "After that, it was, as the ancients sometimes said, on like Donkey Cong."
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "tommy",
+          "text": "Uncle Iton, what is a cong?"
+        },
+        {
+          "voice_id": "REPLACE_WITH_VOICE_UUID",
+          "voice_key": "uncle_iton",
+          "text": "If I knew, I would charge admission. Pay attention."
         },
         {
           "voice_id": "REPLACE_WITH_VOICE_UUID",

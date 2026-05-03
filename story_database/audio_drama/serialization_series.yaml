@@ -1,0 +1,35 @@
+# Salvager audio drama: serial order and episode registry.
+# Podcast / RSS / platform feeds should follow play_order (episode_index ascending).
+
+series:
+  slug: salvager_audio
+  working_title: Salvager (audio)
+  default_episode_code_pattern: "SAL-1x{index:02d}"
+  chapter_audio_script_glob: "chapter_*_audio_script.yaml"
+
+play_order:
+  - episode_index: 1
+    chapter_canon_number: 1
+    episode_code: SAL-1x01
+    script_file: chapter_01_audio_script.yaml
+    primary_manuscript:
+      - ../cp_01.md
+      - ../cp_01_screenplay.md
+    status: ready_for_production
+  # Add rows as chapters ship; keep episode_index contiguous for default serial feed.
+  # - episode_index: 2
+  #   chapter_canon_number: 2
+  #   episode_code: SAL-1x02
+  #   script_file: chapter_02_audio_script.yaml
+  #   primary_manuscript: [../cp_02.md, ../cp_02_screenplay.md]
+  #   status: not_started
+
+optional_between_episodes:
+  - file: series_teaser_from_blurb.yaml
+    role: "Marketing or cold-open bridge; blurb_only until scripted. Can play before 1x01 or between installments."
+
+packaging_rules:
+  - "Each chapter YAML must include a serialization block (copy chapter_TEMPLATE_audio_script.yaml)."
+  - "Block ids in chapter N use prefix CH{N} (example CH2-A01)."
+  - "requires_chapters lists episode_index values listeners must hear first (empty for 1x01)."
+  - "ending_hook.suggested_next_file points at the next beat script for writers and mix."
