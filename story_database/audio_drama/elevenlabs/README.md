@@ -63,9 +63,72 @@ python3 scripts/export_elevenlabs_chapter1.py \
 
 The script emits **arrays of `{ "voice_id", "text" }`** per chunk, each chunk under the character budget. If any `voice_id` is still `REPLACE_`, it prints a warning. JSON field `source` records which file was used.
 
-### Minimal Python client sketch (pseudo-contract)
+### Render to MP3 (rough cut)
 
-Your app should POST each chunk to the [Text-to-Dialogue convert](https://elevenlabs.io/docs/api-reference/text-to-dialogue/convert) endpoint with `model_id: eleven_v3` and `inputs: [...]`. Concatenate returned audio in **chapter order**.
+Use `scripts/render_elevenlabs_chapter1.py` to POST each chunk to ElevenLabs Text-to-Dialogue and stitch the results with `ffmpeg`.
+
+**Pre-flight checklist (do once):**
+
+| Step | Action |
+| --- | --- |
+| 1 | Get an API key: ElevenLabs > Settings > API Keys. |
+| 2 | Pick or clone voices: Voice Library / Voice Lab. Copy the voice UUID for each role (`bam`, `bam_interior`, `sketch`, `uncle_iton`, `tommy`, `samantha`). |
+| 3 | Edit `voice_map.yaml`: replace each `REPLACE_WITH_VOICE_UUID` with a real voice UUID. |
+| 4 | Re-run the exporter so chunks JSON has real IDs (or pass `--voice-map` to the renderer to substitute in place). |
+| 5 | `pip install -r scripts/requirements-export.txt` (adds `requests`). |
+| 6 | Install ffmpeg: `sudo apt install ffmpeg` (Linux) or `brew install ffmpeg` (macOS). |
+| 7 | `export ELEVENLABS_API_KEY=sk_...`. |
+
+**Recommended first run (cost-cheap voice sanity check):**
+
+```bash
+# Dry run: prints chunk count + total characters, no API call.
+python3 scripts/render_elevenlabs_chapter1.py \
+  --input  story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json \
+  --dry-run
+
+# Render only chunk 0 (~1900 chars, ~2-3 min of audio). Listen before committing.
+python3 scripts/render_elevenlabs_chapter1.py \
+  --input  story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json \
+  --chunks 0 \
+  --no-stitch
+```
+
+**Full chapter render + stitch:**
+
+```bash
+python3 scripts/render_elevenlabs_chapter1.py \
+  --input  story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json \
+  --output-dir story_database/audio_drama/elevenlabs/generated/audio \
+  --master story_database/audio_drama/elevenlabs/generated/chapter_01_master.mp3
+```
+
+**Single-voice smoke test (read every line in one neutral voice; no per-role voice setup needed):**
+
+```bash
+python3 scripts/render_elevenlabs_chapter1.py \
+  --input  story_database/audio_drama/elevenlabs/generated/chapter_01_dialogue_chunks.json \
+  --single-voice <voice_uuid>
+```
+
+**Behaviour:**
+
+| Flag | Meaning |
+| --- | --- |
+| `--dry-run` | Print chunk count, total characters, intended endpoints. No API calls. |
+| `--chunks 0,2,5` or `--chunks 0-3` | Render a subset only. Other chunks are skipped (and excluded from stitch). |
+| `--voice-map <path>` | Re-resolve `REPLACE_*` placeholders from voice_map.yaml at render time. |
+| `--single-voice <uuid>` | Override every input with one voice for fast smoke listening. |
+| `--seed <int>` | Pass a seed for reproducibility. |
+| `--force` | Overwrite chunk_NN.mp3 files that already exist (default skips). |
+| `--no-stitch` | Render chunks but skip the ffmpeg concat step. |
+| `--endpoint <url>` | Override the default Text-to-Dialogue endpoint if ElevenLabs renames it. |
+
+**Cost expectation:** The current screenplay-sourced chunks JSON is **4 chunks / ~6,100 characters total** (56 dialogue inputs). Text-to-Dialogue may be billed at a higher per-character rate than standard TTS depending on your plan; check your subscription's monthly character allowance before a full pass. Always run `--chunks 0` first and listen before spending the rest of the quota.
+
+> Run `--dry-run` to confirm the live numbers before committing.
+
+**Reference:** [Text-to-Dialogue convert](https://elevenlabs.io/docs/api-reference/text-to-dialogue/convert).
 
 ## 2. Projects (Studio long-form)
 
